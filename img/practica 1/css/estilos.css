@@ -1,0 +1,51 @@
+p {
+    color: crimson;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.titulos{
+    color: darkolivegreen;
+}
+
+#parrafoimportante{
+    color: darkslateblue;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: lightcyan;
+}
+
+h2.titulovideo{
+    color: deeppink;
+}
+
+ul.paises li{
+    color: gold;
+}
+
+.primerparrafo{
+    text-align: right ;
+}
+
+.botonarriba{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: hotpink;
+}
+
+.segundoparrafo{
+    color: rgba(196, 52, 52, 1);
+    
+}
+
+.tercerparrafo{
+    color: rgb(57, 77, 38);
+}
+
+body{
+    background-image: url("../img/la-curiosa-historia-del-perro-que-ayudo-a-una-mujer-enferma-a-volver-a-mover-el-brazo.jpg");
+    background-size:1024px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
