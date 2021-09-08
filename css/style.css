@@ -11,19 +11,20 @@ li { list-style-type: none; }
 a { text-decoration: none; color: #000; }
 
 header{
-    background-color: black;  
+    background-color: black;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     justify-content: space-between;
 }
 
+
 form{
     padding: 2%;  
     text-align: right;  }
 
-header ul a {
+header ul a{
     text-decoration: none;
     color: white;
     padding: auto; 
@@ -38,10 +39,10 @@ header ul{
     justify-content: space-between;  
     flex-direction: row;
 }
-   header img{
-       width: 15vw;
-   }
 
+header img{
+    width: 15vw;
+}
 header ul a:hover{
     background: rgb(229, 203, 153);   }
 
@@ -63,4 +64,4 @@ footer ul li{
      flex-direction: column;
      justify-content: space-between;
     }
-
+     
