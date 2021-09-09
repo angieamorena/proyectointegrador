@@ -106,7 +106,9 @@ main ul a{
 
 h2{
     background-color: rgb(223, 196, 201);
-}
+    justify-content: center;
+    }
+
 .peliculasPopulares{
     display: flex;
     flex-wrap: wrap;
@@ -155,5 +157,39 @@ h2{
 }
 
 .LoMasVistoEnPeliculas article img {
+    width: 100%;
+}
+
+/*favoritos*/
+.pelis{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10x;
+}
+
+.pelis article{
+    width: 30%;
+}
+
+.pelis article img{
+    width: 100%;
+}
+.series{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10x;
+}
+
+.series article{
+    width: 30%;
+}
+
+.series article img{
     width: 100%;
 }
