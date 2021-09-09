@@ -101,3 +101,59 @@ main ul a{
     flex-direction: column;
     
 }
+
+/*home*/
+
+h2{
+    background-color: rgb(223, 196, 201);
+}
+.peliculasPopulares{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10x;
+}
+
+.peliculasPopulares article{
+    width: 15%;
+}
+
+.peliculasPopulares article img{
+    width: 100%;
+}
+
+.seriesPopulares{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10x;
+}
+
+.seriesPopulares article{
+    width: 15%;
+}
+
+.seriesPopulares article img {
+    width: 100%;
+}
+
+.LoMasVistoEnPeliculas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10x;
+}
+
+.LoMasVistoEnPeliculas article{
+    width: 15%;
+}
+
+.LoMasVistoEnPeliculas article img {
+    width: 100%;
+}
