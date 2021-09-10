@@ -11,7 +11,7 @@ li { list-style-type: none; }
 a { text-decoration: none; color: #000; }
 
 header{
-    background-color: black;
+    background-color: rgb(119, 169, 175);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -46,7 +46,7 @@ header img{
 }
 header ul a:hover{
     background: #fff;
-    color: #000;}
+    color: rgb(125, 163, 180);}
 
 
 /* footer */
@@ -67,14 +67,14 @@ footer{
 }
 
 /*Genero*/ 
-.peliculas{
+.peliculasGenero{
     padding: 15px;
     margin: 0%;
     text-align: center;
     font-size: 50px
 }
 
-.series{
+.seriesGenero{
     padding: 15px;
     margin: 0%;
     text-align: center;
@@ -82,7 +82,7 @@ footer{
 }
 
 body{
-    background-color:rgba(110, 192, 110, 0.815);
+    background-color:rgba(16, 17, 16, 0.815);
     color: white;
 }
 
@@ -103,7 +103,7 @@ a {
 }
 
 
-.itemListaGeneroSeries{
+.listaGeneroSeries{
     display: flex;
     justify-content: space-around;
 }
