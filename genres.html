@@ -14,67 +14,66 @@
         <img src="./img/logo.png" alt="">
 
         <ul>
-            <a href="./index.html">INICIO |</a>
-            <a href="./detail-movie.html">PELICULAS |</a>
-            <a href="./detail-serie.html">SERIES |</a>
-            <a href="./genres.html">GENEROS |</a>
-            <a href="./detail-genres.html">DETALLE DE GENEROS |</a>
-            <a href="./favorite.html">FAVORITOS |</a>
+            <a href="./index.html">INICIO</a>
+            <a href="./detail-movie.html">PELICULAS</a>
+            <a href="./detail-serie.html">SERIES</a>
+            <a href="./genres.html">GENEROS</a>
+            <a href="./favorite.html">FAVORITOS</a>
         </ul>
-        <form action="./search-results.html">
-            <textarea name="buscador" id="buscador" cols="30" rows="1"></textarea>
-            <button type="submit"> Buscar</button>
+        <form  action="./search-results.html">
+            <input type="text" id="buscador" name="buscador" placeholder="Buscador">
+            <button  type="submit"> Buscar</button>
         </form>
 
     </header>
 
     <main>
 
-        <h1 class="generoPrincipal">GENERO</h1>
-            <h2 class="peliculas">Peliculas</h2>
-            <ul>
-                <a href="./detail-genres.html#comedia"> 
-                    <li> <button>Comedia</button> </li>
-                </a>
-                <a href="./detail-genres.html#romantica">
-                    <li> <button>Romantica</button> </li>
-                </a>
-                <a href="./detail-genres.html#terror">
-                    <li> <button>Terror </button> </li>
-                </a>
-                <a href="./detail-genres.html#accion">
-                    <li> <button>Accion</button> </li>
-                </a>
-                <a href="./detail-genres.html#musical">
-                    <li> <button>Musical</button> </li>
-                </a>
-            </ul>
-
-        <h2 class="series">Series</h2>
-        <ul>
-            <a href="./detail-genres.html#drama">
-                <li> <button>Drama</button> </li>
+        <h2 class="peliculas">Peliculas</h2>
+        <ul class="listaGeneroPelis">
+            <a href="./detail-genres.html#comedia"> 
+                <li> <button class="itemListaGeneroPelis">Comedia</button> </li>
             </a>
-            <a href="./detail-serie.html#accion">
-                <li> <button>Accion</button> </li>
+            <a href="./detail-genres.html#romantica">
+                <li> <button class="itemListaGeneroPelis">Romantica</button> </li>
             </a>
-            <a href="./detail-serie.html#comedia">
-                <li> <button>Comedia</button> </li>
+            <a href="./detail-genres.html#terror">
+                <li> <button class="itemListaGeneroPelis">Terror </button> </li>
             </a>
-            <a href="./detail-serie.html#reality">
-                <li> <button>Reality</button> </li>
+            <a href="./detail-genres.html#accion">
+                <li> <button class="itemListaGeneroPelis">Accion</button> </li>
+            </a>
+            <a href="./detail-genres.html#musical">
+                <li> <button class="itemListaGeneroPelis">Musical</button> </li>
             </a>
         </ul>
 
+    <h2 class="listaGeneroSeries">Series</h2>
+    <ul>
+        <a href="./detail-genres.html#drama">
+            <li> <button class="itemListaGeneroSeries">Drama</button> </li>
+        </a>
+        <a href="./detail-serie.html#accion">
+            <li> <button class="itemListaGeneroSeries">Accion</button> </li>
+        </a>
+        <a href="./detail-serie.html#comedia">
+            <li> <button class="itemListaGeneroSeries">Comedia</button> </li>
+        </a>
+        <a href="./detail-serie.html#reality">
+            <li> <button class="itemListaGeneroSeries">Reality</button> </li>
+        </a>
+    </ul>
+
     </main>
     <footer>
-        <h2>Integrantes:</h2>
         <ul>
+            <li class="tituloIntegrantes">Integrantes:</li>
             <li>Jimena Freiman</li>
             <li>Maria de los Angeles Amorena</li>
             <li>Tadeo Benzadon</li>
         </ul>
     </footer>
+
 
 </body>
 
