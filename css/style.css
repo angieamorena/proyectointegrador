@@ -435,10 +435,7 @@ text-decoration: underline;
     }
    
     .buscador{
-        display: flex;
-        flex-wrap: wrap;
-       align-items: center;
-}
 
-    
-    
+    }
+        
+}
