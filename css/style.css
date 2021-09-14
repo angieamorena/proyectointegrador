@@ -16,6 +16,10 @@ body {
 }
 a{
     color: white;
+    text-decoration: underline;
+}
+img{
+    margin: 10px 0px 0px 0px;
 }
 
 body header{
