@@ -148,6 +148,7 @@ text-decoration: underline;
 
 .busqueda article img{
     width: 100%;
+    max-height: 250px;
 }
 
 /*home*/
@@ -175,6 +176,7 @@ h2{
 
 .homePeliculasPopulares article img{
     width: 100%;
+    max-height: 250px;
 }
 
 .homePeliculasPopulares a{
@@ -195,6 +197,7 @@ h2{
 
 .homeSeriesPopulares article img {
     width: 100%;
+    max-height: 150px;
 }
 
 .homeLoMasVistoEnPeliculas{
@@ -212,6 +215,7 @@ h2{
 
 .homeLoMasVistoEnPeliculas article img {
     width: 100%;
+    max-height: 250px;
 }
 
 
@@ -255,6 +259,7 @@ h2{
 
 .favouritePelis article img{
     width: 100%;
+    max-height: 350px;
 
 }
 .favouriteSeries{
@@ -274,6 +279,7 @@ h2{
 
 .favouriteSeries article img{
     width: 100%;
+    max-height: 200px;
 }
 
 .favouriteSeries a{
@@ -318,6 +324,7 @@ text-decoration: underline;
 
 .detallePeliculas article img{
     width: 100%;
+    max-height:250px;
 }
 
 /*Dettale series */
@@ -355,6 +362,7 @@ text-decoration: underline;
 
 .detalleSeries article img{
     width: 100%;
+    max-height: 200px;
 }
 
 /*Dettale generos */
@@ -386,6 +394,14 @@ text-decoration: underline;
     width: 100%;
 }
 
+.generoDetalleSeries img{
+    max-height: 200px;
+}
+
+.generoDetallePeliculas img{
+    max-height: 450px;
+}
+
 /* para telefono */
 @media (max-width: 420px) {
  
@@ -394,10 +410,28 @@ text-decoration: underline;
     .detallePeliculas article{
         width: 40%;
     }
+    .detallePeliculas section{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 10px 10px;
+    }
 
     /*detalle series*/
     .detalleSeries article{
         width: 40%;
+    }
+    .detalleSeries section{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 10px 10px;
     }
 
     /*home*/
