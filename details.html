@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Details</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="detalles">
     <header>
         <img src="img/logo.png" alt="logo">
-
         <ul>
             <a href="./index.html">
                 <li>INICIO</li>
@@ -31,33 +29,39 @@
                 <li> FAVORITOS</li>
             </a>
         </ul>
-        <form class="buscador" action="./search-results.html" class="buscador">
+        <form action="./search-results.html" class="buscador">
             <input type="text" id="buscador" name="buscador" placeholder="Buscador">
             <button type="submit"> Buscar</button>
         </form>
     </header>
-
-    <main class="busqueda">
-
-        <h1>Resultado de Busqueda: Peliculas romanticas</h1>
-
+    <main class="mainDetalle">
         <section>
             <article>
-                <a href="details.html">PRIDE AND PREJUDICE</a> <br>
-                <img src="img/prideandprejudice.jpg" alt="pride and prejudice"> <br>
+                <img src="./img/soncomoniños.jpg" alt="son como niños">
             </article>
             <article>
-                <a href="details.html">EL STAND DE LOS BESOS 2</a><br>
-                <img src="img/elstanddelosbesos2.jpg" alt="el stand de los besos 2"> <br>
+                <h3>ESTRENO:</h3>
+                <p> 23 de septiembre de 2004</p>
+            
+                <h3>RATING:</h3>
+                <p> 7/10 </p>
+           
+                <h3>DURACION: </h3>
+                <p> 1h 37m </p>
+           
+                <h3> SINOPSIS:</h3>
+                <p> Una joven adolescente, Cady, acostumbrada a vivir en África con sus padres
+                    zoólogos, se encuentra una nueva jungla cuando se muda a Illinois. Allí acude a la escuela
+                    pública, donde se enamorará del ex-novio de la chica más popular del colegio.</p>
+           
+                <h3> GENERO: </h3>
+                <p> <a href="./detail-genres.html#comediap">COMEDIA</a> </p>
+            
+                <h3><a href="./favorite.html">AGREGAR A FAVORITOS</a> </h3>
             </article>
-            <article>
-                <a href="details.html">ENDLESS LOVE</a><br>
-                <img src="img/endless love.jpg" alt="endless love"> <br>
-            </article>
+
         </section>
-
     </main>
-
     <footer>
         <ul>
             <li class="tituloIntegrantes">Integrantes:</li>
@@ -66,11 +70,6 @@
             <li>Tadeo Benzadon</li>
         </ul>
     </footer>
-
-
-
-
-
 </body>
 
 </html>

@@ -402,6 +402,23 @@ text-decoration: underline;
     max-height: 450px;
 }
 
+/*detalles*/
+
+.detalles section{
+    display: flex;
+    flex-direction: row;
+}
+
+.detalles article {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.detalles img {
+    max-height: 600px;
+}
+
+
 /* para telefono */
 @media (max-width: 420px) {
  
