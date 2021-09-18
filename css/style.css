@@ -518,4 +518,19 @@ text-decoration: underline;
         height: auto;
     }
 
+    /*detalle*/
+    .detalles section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detalles article {
+        font-size: 15px;
+    }
+    
+    .detalles img {
+        max-height: 500px;
+    }
+
 }
