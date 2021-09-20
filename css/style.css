@@ -1,4 +1,4 @@
-/* header */ 
+
 
 * { box-sizing: border-box; }
 
@@ -9,6 +9,7 @@ ul, ol { padding: 0; }
 li { list-style-type: none; }
 
 a { text-decoration: none; color: #000; }
+
 
 body {
     background-color:rgba(16, 17, 16, 0.815);
@@ -22,6 +23,7 @@ img{
     margin: 10px 0px 0px 0px;
 }
 
+/* header */ 
 body header{
     background-color: rgb(104, 159, 165);
     display: flex;
