@@ -154,16 +154,15 @@ text-decoration: underline;
     max-height: 250px;
 }
 
-/*home*/
-
 h2{
     background-color: rgb(104, 159, 165);
     text-align: center;
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
-    text-decoration: none;
+    text-decoration:none;
     }
 
+/*home*/
 .homePeliculasPopulares{
     display: flex;
     flex-wrap: wrap;
@@ -179,12 +178,9 @@ h2{
 
 .homePeliculasPopulares article img{
     width: 100%;
-    max-height: 250px;
+    max-height: 350px;
 }
 
-.homePeliculasPopulares a{
-    text-align: center;
-}
 .homeSeriesPopulares{
     display: flex;
     flex-wrap: wrap;
@@ -218,7 +214,7 @@ h2{
 
 .homeLoMasVistoEnPeliculas article img {
     width: 100%;
-    max-height: 250px;
+    max-height: 350px;
 }
 
 
@@ -262,7 +258,7 @@ h2{
 
 .favouritePelis article img{
     width: 100%;
-    max-height: 350px;
+    max-height: 500px;
 
 }
 .favouriteSeries{
@@ -282,7 +278,7 @@ h2{
 
 .favouriteSeries article img{
     width: 100%;
-    max-height: 200px;
+    max-height: 300px;
 }
 
 .favouriteSeries a{
@@ -327,7 +323,7 @@ text-decoration: underline;
 
 .detallePeliculas article img{
     width: 100%;
-    max-height:250px;
+    max-height:350px;
 }
 
 /*Dettale series */
@@ -365,7 +361,7 @@ text-decoration: underline;
 
 .detalleSeries article img{
     width: 100%;
-    max-height: 200px;
+    max-height: 300px;
 }
 
 /*Dettale generos */
@@ -398,11 +394,11 @@ text-decoration: underline;
 }
 
 .generoDetalleSeries img{
-    max-height: 200px;
+    max-height: 300px;
 }
 
 .generoDetallePeliculas img{
-    max-height: 450px;
+    max-height: 550px;
 }
 
 /*detalles*/
