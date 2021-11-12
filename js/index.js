@@ -14,7 +14,7 @@ fetch(url)
    peliculasPopulares+= `<article> 
    <p>Name: ${info[i].title} </p>
    <img src= "https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt= '' />
-    <a href= "./detalle.html?id=${info[i].id}"> Ver mas</a>
+    <a href= "./details.html?id=${info[i].id}"> Ver mas</a>
     </article>`
   }
   lista.innerHTML=peliculasPopulares; 
