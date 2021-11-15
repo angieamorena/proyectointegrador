@@ -14,17 +14,17 @@ fetch(url)
 .then(function(data) {
   console.log(data);
   
-//   titulo.innerText+= data.title;
-//   imagen.src = `https://image.tmdb.org/t/p/w342${data.poster_path}`; 
-//   estreno.innerText= data.release_date; 
-//   rating.innerText= data.vote_average; 
-//   duracion.innerText= data.runtime + " minutos"; 
-//   sinopsis.innerText = data.overview; 
-//   let listageneros= ''
-//   for(let i=0; i<data.genres.length; i++ ){
-//     listageneros += `<a href="./detail-genres.html#comediap">${data.genres[i].name}</a>, `;
-//   }
-//   genero.innerHTML= listageneros
+  titulo.innerText+= data.title;
+  imagen.src = `https://image.tmdb.org/t/p/w342${data.poster_path}`; 
+  estreno.innerText= data.release_date; 
+  rating.innerText= data.vote_average; 
+  duracion.innerText= data.runtime + " minutos"; 
+  sinopsis.innerText = data.overview; 
+  let listageneros= ''
+  for(let i=0; i<data.genres.length; i++ ){
+    listageneros += `<a href="./detail-genres.html#comediap">${data.genres[i].name}</a>, `;
+  }
+  genero.innerHTML= listageneros
 })
 .catch(function(error) {
   console.log("Error: " + error);
