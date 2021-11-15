@@ -29,7 +29,7 @@ fetch(url)
   console.log("Error: " + error);
 })
 
-let url2 = `https://api.themoviedb.org/3/discover/tv?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&&with_genres=${id}with_watch_monetization_types=flatrate`
+let url2 = `https://api.themoviedb.org/3/discover/tv?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&&with_genres=${id}&with_watch_monetization_types=flatrate`
 fetch(url2)
 .then(function(response) {
   return response.json()
