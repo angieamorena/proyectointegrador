@@ -25,7 +25,7 @@ fetch(url)
   sinopsis.innerText = data.overview; 
   let listageneros= ''
   for(let i=0; i<data.genres.length; i++ ){
-    listageneros += `<a href="./detail-genres.html#comediap">${data.genres[i].name}</a>, `;
+    listageneros += `<a href="./detailsSeries.html?id=${data.genres[i].id}">${data.genres[i].name}</a>, `;
   }
   genero.innerHTML= listageneros
   
