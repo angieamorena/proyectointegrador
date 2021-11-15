@@ -367,38 +367,45 @@ text-decoration: underline;
 .detalleGeneros h2{
     background-color: rgb(104, 159, 165);
     text-align: center;
-    }  
-.detalleGeneros h3{
-    margin: 20px;
-}    
+    font-family: 'Bebas Neue', cursive;
+    font-size: 23px;
+    }
+
+.detalleGeneros h1{
+    background-color: rgb(104, 159, 165);
+    text-align: center;
+    width: 100vw;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    }
+
 .detalleGeneros section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    padding: 10px 10x;
-    margin: 2%;
+    padding: 10px 10px;
 }
 .detalleGeneros section a{
 text-decoration: underline;
 }
 
 .detalleGeneros article{
-    width: 30%;
+    width: 17%;
+    background-color: rgb(104, 159, 165);
+    margin: 2%;
+}
+.detalleGeneros article p{
+    font-size: 20px;
+}
+.detalleGeneros article a{
+    font-size: 20px;
 }
 
 .detalleGeneros article img{
     width: 100%;
-}
-
-.generoDetalleSeries img{
-    max-height: 300px;
-}
-
-.generoDetallePeliculas img{
-    max-height: 550px;
-}
+    max-height:350px;
 
 /*detalles*/
 

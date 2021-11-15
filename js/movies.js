@@ -37,7 +37,7 @@ fetch(url3)
   let lasPeliculasMasValoradas= '';
   for(let i=0; i<5; i ++){
     lasPeliculasMasValoradas+= `<article> 
-   <p>Name: ${info3[i].title} </p>
+   <p>${info3[i].title} </p>
    <img src= "https://image.tmdb.org/t/p/w342${info3[i].poster_path}" alt= '' />
     <a href= "./detailsMovies.html?id=${info3[i].id}"> Ver mas</a>
     </article>`
