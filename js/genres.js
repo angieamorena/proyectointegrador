@@ -21,7 +21,7 @@ fetch(peliculasGenero1)
 
         peliculasGenero += `
 
-        <a href="detail-genres.html?id=${info[i].id}"> 
+        <a href="./detail-genres.html?id=${info[i].id}"> 
 
         <li> <h3 class = "itemListaGeneroPelis">${info[i].name}</h3> </li>
 

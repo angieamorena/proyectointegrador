@@ -5,14 +5,14 @@ fetch(url2)
 .then(function(response) {
   return response.json()
 })
-.then(function(data2) {
-  console.log(data2);
-  let info2 = data2.results;
+.then(function(data) {
+  console.log(data);
+  let info2 = data.results;
   let lista2 = document.querySelector(".series")
   let seriesPopulares= '';
   for(let i=0; i<5; i ++){
    seriesPopulares+= `<article> 
-   <p>Name: ${info2[i].title} </p>
+   <p>Name: ${info2[i].name} </p>
    <img src= "https://image.tmdb.org/t/p/w342${info2[i].poster_path}" alt= '' />
     <a href= "./detailsSeries.html?id=${info2[i].id}"> Ver mas</a>
     </article>`
