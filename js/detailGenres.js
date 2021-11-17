@@ -12,9 +12,7 @@ fetch(url)
 })
 .then(function(data) {
   console.log(data);
-  let titulo = document.querySelector(".titulo")
   let peliculasGenero= document.querySelector(".peliculasGenero")
-  titulo.innerText+= data.title;
   let listageneros= ''
   for(let i=0; i<data.results.length; i++ ){
     listageneros += `<article> 
@@ -36,9 +34,7 @@ fetch(url2)
 })
 .then(function(data) {
   console.log(data);
-  let titulo = document.querySelector(".titulo")
   let seriesGenero= document.querySelector(".generoDetalleSeries")
-  titulo.innerText+= data.title;
   let listageneros= '';
   for(let i=0; i<data.results.length; i++ ){
     listageneros += `<article> 
@@ -48,6 +44,21 @@ fetch(url2)
      </article>`;
   }
   seriesGenero.innerHTML= listageneros; 
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+})
+
+let URLparaElTitulo = `https://api.themoviedb.org/3/genre/${id}?api_key=924a6f16470b17afdd20524ec31c09be&language=es`;
+
+fetch(URLparaElTitulo)
+.then(function(response) {
+  return response.json()
+})
+.then(function(data) {
+  console.log(data);
+  let titulo = document.querySelector(".titulo")
+  titulo.innerText+= data.name;
 })
 .catch(function(error) {
   console.log("Error: " + error);
