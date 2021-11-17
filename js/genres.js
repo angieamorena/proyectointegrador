@@ -40,9 +40,9 @@ fetch(peliculasGenero1)
 
 //SERIES//
 
-let seriesGenero2 = 'https://api.themoviedb.org/3/genre/tv/list?api_key=93e508f17b507f9418365fe0a4069252&language=es'
+let serie1 = 'https://api.themoviedb.org/3/genre/tv/list?api_key=93e508f17b507f9418365fe0a4069252&language=es'
 
-fetch(seriesGenero2)
+fetch(serie1)
 .then(function(response) {
   return response.json()
 })
@@ -69,7 +69,7 @@ fetch(seriesGenero2)
   
   `}
 
-  gener.innerHTML=seriesGenero; 
+  genres.innerHTML=seriesGenero; 
 
 })
 
