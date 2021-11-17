@@ -42,7 +42,7 @@ fetch(url2)
   let listageneros= '';
   for(let i=0; i<data.results.length; i++ ){
     listageneros += `<article> 
-    <p>${data.results[i].title} </p>
+    <p>${data.results[i].original_name} </p>
     <img src= "https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt= '' />
      <a href= "./detailsSeries.html?id=${data.results[i].id}"> Ver mas</a>
      </article>`;
