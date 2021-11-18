@@ -1,16 +1,16 @@
 let recuperoStorage = localStorage.getItem('favorite');
-let favorite = JSON.parse(recuperoStorage);
+let favoritos = JSON.parse(recuperoStorage);
 
 let lista = document.querySelector('.lista');
 let seriesFavoritas = '';
 let peliculasFavoritas = '';
 
-if (favorite == null || favorite.length == 0) {
+if (favoritos == null || favoritos.length == 0) {
     lista.innerHTML = '<h2>No hay series o peliculas seleccionadas</h2>';
 }
 
 //series
-for (let i = 0; i < favorite.length; i++) {
+for (let i = 0; i < favoritos.length; i++) {
     //llamar a la api para obtener datos de cada id
     let urlSeries = `https://api.themoviedb.org/3/tv/${favorite[i]}?api_key=3335fc92ac8e1b65144fc97f2d99d9c7`
 
@@ -41,9 +41,9 @@ for (let i = 0; i < favorite.length; i++) {
 
 //peliculas
 
-for (let i = 0; i < favorite.length; i++) {
+for (let i = 0; i < favoritos.length; i++) {
 
-    let urlPeliculas = `https://api.themoviedb.org/3/movie/${favorite[i]}?api_key=3335fc92ac8e1b65144fc97f2d99d9c7`
+    let urlPeliculas = `https://api.themoviedb.org/3/movie/${favoritos[i]}?api_key=3335fc92ac8e1b65144fc97f2d99d9c7`
 
 
 
