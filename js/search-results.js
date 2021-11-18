@@ -1,4 +1,3 @@
-
 let queryString = window.location.search; //agarro toda la url//
 
 let queryObject = new URLSearchParams (queryString); 
