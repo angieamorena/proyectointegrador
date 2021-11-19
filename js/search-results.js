@@ -12,7 +12,41 @@ let url = `https://api.themoviedb.org/3/search/multi?api_key=93e508f17b507f94183
 let containerResults = document.querySelector ('.contenedorBusqueda'); //se captura el lugar donde se va meter la busqueda//
 let searchTitle = document.querySelector ('.buscadorTitulo')
 
-  // Filtro: TODOS [MOVIES + SERIES + PERSONAS]
+//validar formulario//
+// console.log("validando forms");
+
+// let formulario = document.querySelector('form');
+// console.log(formulario)
+// let inputField = document.querySelector('.search');
+// let message = document.querySelector('.message');
+
+// formulario.addEventListener('submit', function(evento){
+//     evento.preventDefault();
+    
+//     //Que el campo no esté vacío
+//     if(inputField.value == ""){
+//         //Mostrar un mensaje al usuario
+//         message.innerText = "El campo es obligatorio"
+//     //Chequear si puso más de 3 caracteres.    
+//     } else if(inputField.value.length < 3){
+//         message.innerText = "Ingresar al menos 3 caracteres"
+//     } else {
+//         formulario.submit()
+//     }
+
+// })
+
+// //Cuando el usuario ingrese al campo => limpiar el mensaje de error.
+// inputField.addEventListener('focus', function(evento){
+//     console.log(evento)
+//     //Limpiar el mensaje de error
+//     message.innerText = "";
+//     //Limpie el valor que tenga el campo.
+//     this.value = "";
+// })
+
+
+  // Filtro: TODOS [Series, Peliculas y Actores]
       
   fetch (url)
   .then (datos=>datos.json() )
@@ -38,7 +72,7 @@ let searchTitle = document.querySelector ('.buscadorTitulo')
         else if (multi.media_type == "movie"){
           results +=
           `<article>
-          <a href="detailsMovies.html?id=${multi.id}">${multi.title}}</a> <br>
+          <a href="detailsMovies.html?id=${multi.id}">${multi.title}</a> <br>
           <img src="https://image.tmdb.org/t/p/w500/${multi.poster_path}"> <br>
           </article>
           ` 

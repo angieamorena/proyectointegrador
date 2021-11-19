@@ -116,7 +116,8 @@ footer{
 .listaGeneroPelis{
     display: flex;
     justify-content: center;
-    
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 
@@ -129,6 +130,8 @@ footer{
 .listaGeneroSeries{
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .itemListaGeneroSeries{
