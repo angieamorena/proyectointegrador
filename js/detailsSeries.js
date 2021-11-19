@@ -29,43 +29,43 @@ fetch(url)
   }
   genero.innerHTML= listageneros
   
-//  agregar a favoritos
-    let favoritos = [];
+//  agregar a seriesFavoritas
+    let seriesFavoritas = [];
     localStorage.clear(); 
 
   // actualizar el array por si hay datos en el storage
-  let recuperoStorage = localStorage.getItem('favoritos');
+  let recuperoStorageSeries = localStorage.getItem('seriesFavoritas');
 
-  if (recuperoStorage != null){
-    favoritos = JSON.parse(recuperoStorage); 
+  if (recuperoStorageSeries != null){
+    seriesFavoritas = JSON.parse(recuperoStorageSeries); 
   }
 
   //capturo los datos 
-  let linkFav = document.querySelector('.favoritosDetalle'); 
+  let linkFav = document.querySelector('.seriesFavoritasDetalle'); 
 
-  //si el id esta en el array de favoritos 
-  if(favoritos.includes(id)){
-  linkFav.innerText= "Quitar de favoritos"; 
+  //si el id esta en el array de seriesFavoritas 
+  if(seriesFavoritas.includes(id)){
+  linkFav.innerText= "Quitar de seriesFavoritas"; 
   }
     
   //cuando haga click
     linkFav.addEventListener('click', function(event){
     event.preventDefault();
 
-    //para quitar de favoritos 
-    if(favoritos.includes(id)){
-      favoritos.splice(favoritos.indexOf(id),1)
-      linkFav.innerText= "Agregar a favoritos";
+    //para quitar de seriesFavoritas 
+    if(seriesFavoritas.includes(id)){
+      seriesFavoritas.splice(seriesFavoritas.indexOf(id),1)
+      linkFav.innerText= "Agregar a seriesFavoritas";
     }
     else {
     //pushear el id al array
-      favoritos.push(id);
-      linkFav.innerText= "Quitar de favoritos"; 
+      seriesFavoritas.push(id);
+      linkFav.innerText= "Quitar de seriesFavoritas"; 
     }
     
     //guardar el array al storage 
-    let favoritosString = JSON.stringify(favoritos)
-    localStorage.setItem('favoritos', favoritosString);
+    let seriesFavoritasString = JSON.stringify(seriesFavoritas)
+    localStorage.setItem('seriesFavoritas', seriesFavoritasString);
     
     console.log(localStorage); 
     })
