@@ -12,10 +12,10 @@ fetch(url)
   let peliculasPopulares= '';
   for(let i=0; i<5; i ++){
    peliculasPopulares+= `<article> 
-   <p>Name: ${info[i].title} </p>
-   <img src= "https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt= '' />
-    <a href= "./detailsMovies.html?id=${info[i].id}"> Ver mas</a>
-    </article>`
+                          <p>Name: ${info[i].title} </p>
+                          <img src= "https://image.tmdb.org/t/p/w342${info[i].poster_path}" alt= '' />
+                          <a href= "./detailsMovies.html?id=${info[i].id}"> Ver mas</a>
+                         </article>`
   }
   lista.innerHTML=peliculasPopulares; 
 })
@@ -38,10 +38,10 @@ fetch(url2)
   let seriesPopulares= '';
   for(let i=0; i<5; i ++){
    seriesPopulares+= `<article> 
-   <p>Name: ${info2[i].title} </p>
-   <img src= "https://image.tmdb.org/t/p/w342${info2[i].poster_path}" alt= '' />
-    <a href= "./detailsSeries.html?id=${info2[i].id}"> Ver mas</a>
-    </article>`
+                         <p>Name: ${info2[i].name} </p>
+                         <img src= "https://image.tmdb.org/t/p/w342${info2[i].poster_path}" alt= '' />
+                         <a href= "./detailsSeries.html?id=${info2[i].id}"> Ver mas</a>
+                      </article>`
   }
   lista2.innerHTML=seriesPopulares; 
 })

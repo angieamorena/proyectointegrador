@@ -12,7 +12,6 @@ fetch(url)
   return response.json()
 })
 .then(function(data) {
-  console.log(data);
   let generos = data.genres;
   let titulo = document.querySelector(".titulo")
   let imagen = document.querySelector(".imagen")
@@ -29,13 +28,12 @@ fetch(url)
   sinopsis.innerText = data.overview; 
   let listageneros= '';
   for(let i=0; i<generos.length; i++ ){
-    listageneros += `<a href="./detail-genres.html?id=${generos[i].id}">${generos[i].name}</a>, `;
+    listageneros += `<a href="./detail-genres.html?id=${generos[i].id}">${generos[i].name}</a> `;
   }
   genero.innerHTML= listageneros
   
 //  agregar a peliculasFavoritas
     let peliculasFavoritas = [];
-    localStorage.clear(); 
 
   // actualizar el array por si hay datos en el storage
   let recuperoStoragePelis = localStorage.getItem('peliculasFavoritas');
@@ -45,11 +43,11 @@ fetch(url)
   }
 
   //capturo los datos 
-  let linkFav = document.querySelector('.peliculasFavoritasDetalle'); 
+  let linkFav = document.querySelector('.favoritosPelisDetalle'); 
 
   //si el id esta en el array de peliculasFavoritas 
   if(peliculasFavoritas.includes(id)){
-  linkFav.innerText= "Quitar de peliculasFavoritas"; 
+  linkFav.innerText= "Quitar de Favoritos"; 
   }
     
   //cuando haga click
@@ -58,22 +56,23 @@ fetch(url)
 
     //para quitar de peliculasFavoritas 
     if(peliculasFavoritas.includes(id)){
-      peliculasFavoritas.splice(peliculasFavoritas.indexOf(id),1)
-      linkFav.innerText= "Agregar a peliculasFavoritas";
+      let idASacarPeliculas= peliculasFavoritas.indexOf(id);
+      peliculasFavoritas.splice(idASacarPeliculas,1);
+      linkFav.innerText= "Agregar a Favoritos";
     }
     else {
     //pushear el id al array
       peliculasFavoritas.push(id);
-      linkFav.innerText= "Quitar de peliculasFavoritas"; 
+      linkFav.innerText= "Quitar de Favoritos"; 
     }
     
     //guardar el array al storage 
-    let peliculasFavoritasString = JSON.stringify(peliculasFavoritas)
+    let peliculasFavoritasString = JSON.stringify(peliculasFavoritas);
     localStorage.setItem('peliculasFavoritas', peliculasFavoritasString);
     
     console.log(localStorage); 
     })
 })
 .catch(function(error) {
-  console.log("Error: " + error);
+  console.log(error);
 })
