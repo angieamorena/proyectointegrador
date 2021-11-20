@@ -5,8 +5,8 @@ let recuperoStorageSeries = localStorage.getItem('seriesFavoritas');
 let favoritosPelis = JSON.parse(recuperoStoragePelis);
 let favoritosSeries = JSON.parse(recuperoStorageSeries);
 
-let listaPeliculas = document.querySelector('.favouritePelis');
-let listaSeries=  document.querySelector('.favouriteSeries');
+let listaPeliculas = document.querySelector('.favoritePelis');
+let listaSeries=  document.querySelector('.favoriteSeries');
 
 let seriesFavoritas = [];
 let peliculasFavoritas = [];

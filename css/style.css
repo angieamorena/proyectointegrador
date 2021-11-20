@@ -237,13 +237,13 @@ h2{
 
 /*favoritos*/
 
-.favourite h1{
+.favorite h1{
     background-color: rgb(104, 159, 165);
     text-align: center;
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
 }
-.favouritePelis{
+.favoritePelis{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -252,18 +252,18 @@ h2{
    
 }
 
-.favouritePelis article{
+.favoritePelis article{
     width: 17%;
     background-color: rgb(104, 159, 165);
     margin: 2%;
 }
 
-.favouritePelis a {
+.favoritePelis a {
     color: white;
     text-decoration: underline;
 }
 
-.favourite h2{
+.favorite h2{
     background-color: rgb(104, 159, 165);
     text-align: center;
     font-family: 'Bebas Neue', cursive;
@@ -272,12 +272,12 @@ h2{
     color: white;
 }
 
-.favouritePelis article img{
+.favoritePelis article img{
     width: 100%;
     max-height: 500px;
 
 }
-.favouriteSeries{
+.favoriteSeries{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -286,18 +286,18 @@ h2{
     padding: 10px 10x;
 }
 
-.favouriteSeries article{
+.favoriteSeries article{
     width: 17%;
     background-color: rgb(104, 159, 165);
     margin: 2%;
 }
 
-.favouriteSeries article img{
+.favoriteSeries article img{
     width: 100%;
     max-height: 300px;
 }
 
-.favouriteSeries a{
+.favoriteSeries a{
     color: white;
     text-decoration: underline;
 }
