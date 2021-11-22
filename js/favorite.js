@@ -1,21 +1,12 @@
-
-let recuperoStoragePelis = localStorage.getItem('peliculasFavoritas');
-let recuperoStorageSeries = localStorage.getItem('seriesFavoritas');
-
-let favoritosPelis = JSON.parse(recuperoStoragePelis);
-let favoritosSeries = JSON.parse(recuperoStorageSeries);
-
-let listaPeliculas = document.querySelector('.favoritePelis');
-let listaSeries=  document.querySelector('.favoriteSeries');
-
-let seriesFavoritas = [];
-let peliculasFavoritas = [];
-
 //series
+let recuperoStorageSeries = localStorage.getItem('seriesFavoritas');
+let favoritosSeries = JSON.parse(recuperoStorageSeries);
+let listaSeries=  document.querySelector('.favoriteSeries');
+let seriesFavoritas = [];
+
 if (favoritosSeries == null || favoritosSeries.length == 0) {
     listaSeries.innerHTML = '<h2>No hay series seleccionadas</h2>';
 }
-
 
 const seriesKey= "70cd756c5bc6ca141759c814f5357912";
 
@@ -42,7 +33,10 @@ for (let i = 0; i < favoritosSeries.length; i++) {
             console.log(error);
         })
 }
-
+let recuperoStoragePelis = localStorage.getItem('peliculasFavoritas');
+let favoritosPelis = JSON.parse(recuperoStoragePelis);
+let listaPeliculas = document.querySelector('.favoritePelis');
+let peliculasFavoritas = [];
 //peliculas
 if (favoritosPelis == null || favoritosPelis.length == 0) {
     listaPeliculas.innerHTML = '<h2>No hay peliculas seleccionadas</h2>';
