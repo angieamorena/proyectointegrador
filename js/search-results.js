@@ -1,10 +1,9 @@
-// //validar formulario//
-console.log("validando forms");
+//validar formulario//
 
 let formulario = document.querySelector('form');
-console.log(formulario)
 let inputField = document.querySelector('.buscar');
 let message = document.querySelector('.message');
+console.log(formulario)
 
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault();
@@ -24,7 +23,8 @@ formulario.addEventListener('submit', function(evento){
 
 //Cuando el usuario ingrese al campo => limpiar el mensaje de error.
 inputField.addEventListener('focus', function(evento){
-    console.log(evento)
+  evento.preventDefault(); 
+  console.log(evento)
     //Limpiar el mensaje de error
     message.innerText = "";
     //Limpie el valor que tenga el campo.
