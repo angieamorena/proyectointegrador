@@ -1,17 +1,3 @@
-let queryString = window.location.search; //agarro toda la url//
-
-let queryObject = new URLSearchParams (queryString); 
-console.log (queryObject);
-// en query object transformo la url entera para poder agarrar los datos requeridos (los que la persona busco)//
-
-let search = queryObject.get('buscar'); //agarraste la url y la separaste y podes ahora buscar puntualmente//
-console.log (search)
-
-let url = `https://api.themoviedb.org/3/search/multi?api_key=93e508f17b507f9418365fe0a4069252&language=en-US&query=${search}&page=1&include_adult=false` //destaca el resultado de la busquedA//
-
-let containerResults = document.querySelector ('.contenedorBusqueda'); //se captura el lugar donde se va meter la busqueda//
-let searchTitle = document.querySelector ('.buscadorTitulo')
-
 // //validar formulario//
 console.log("validando forms");
 
@@ -44,6 +30,22 @@ inputField.addEventListener('focus', function(evento){
     //Limpie el valor que tenga el campo.
     this.value = "";
 })
+
+
+
+let queryString = window.location.search; //agarro toda la url//
+
+let queryObject = new URLSearchParams (queryString); 
+console.log (queryObject);
+// en query object transformo la url entera para poder agarrar los datos requeridos (los que la persona busco)//
+
+let search = queryObject.get('buscar'); //agarraste la url y la separaste y podes ahora buscar puntualmente//
+console.log (search)
+
+let url = `https://api.themoviedb.org/3/search/multi?api_key=93e508f17b507f9418365fe0a4069252&language=en-US&query=${search}&page=1&include_adult=false` //destaca el resultado de la busquedA//
+
+let containerResults = document.querySelector ('.contenedorBusqueda'); //se captura el lugar donde se va meter la busqueda//
+let searchTitle = document.querySelector ('.buscadorTitulo')
 
 
   // Filtro: TODOS [Series, Peliculas y Actores]
