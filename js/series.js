@@ -13,7 +13,7 @@ fetch(url2)
   for(let i=0; i<5; i ++){
    seriesPopulares+= `<article> 
    <p>Name: ${info2[i].name} </p>
-   <img src= "https://image.tmdb.org/t/p/w342${info2[i].poster_path}" alt= '' />
+   <img src= "https://image.tmdb.org/t/p/w342${info2[i].poster_path}" alt= '' /><br>
     <a href= "./detailsSeries.html?id=${info2[i].id}"> Ver mas</a>
     </article>`
   }

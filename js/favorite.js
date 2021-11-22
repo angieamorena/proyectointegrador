@@ -1,6 +1,7 @@
 //series
 let recuperoStorageSeries = localStorage.getItem('seriesFavoritas');
 let favoritosSeries = JSON.parse(recuperoStorageSeries);
+
 let listaSeries=  document.querySelector('.favoriteSeries');
 let seriesFavoritas = [];
 
