@@ -4,6 +4,8 @@ let qsToObject = new URLSearchParams(queryString);
 
 let id = qsToObject.get('id');
 
+//peliculas
+
 let url= `https://api.themoviedb.org/3/discover/movie?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
 
 fetch(url)
@@ -18,7 +20,7 @@ fetch(url)
     listageneros += `<article> 
     <p>${data.results[i].title} </p>
     <img src= "https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt= '' />
-     <a href= "./detailsSeries.html?id=${data.results[i].id}"> Ver mas</a>
+     <a href= "./detailsMovies.html?id=${data.results[i].id}"> Ver mas</a>
      </article>`;
   }
   peliculasGenero.innerHTML= listageneros; 
@@ -26,6 +28,8 @@ fetch(url)
 .catch(function(error) {
   console.log("Error: " + error);
 })
+
+//series 
 
 let url2 = `https://api.themoviedb.org/3/discover/tv?api_key=924a6f16470b17afdd20524ec31c09be&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&&with_genres=${id}&with_watch_monetization_types=flatrate`
 fetch(url2)
@@ -48,6 +52,8 @@ fetch(url2)
 .catch(function(error) {
   console.log("Error: " + error);
 })
+
+// titulo 
 
 let URLparaElTitulo = `https://api.themoviedb.org/3/genre/${id}?api_key=924a6f16470b17afdd20524ec31c09be&language=es`;
 

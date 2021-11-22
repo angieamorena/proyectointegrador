@@ -32,38 +32,38 @@ fetch(url)
 //  agregar a seriesFavoritas
     let seriesFavoritas = [];
 
-  // actualizar el array por si hay datos en el storage
+  
   let recuperoStorageSeries = localStorage.getItem('seriesFavoritas');
 
   if (recuperoStorageSeries != null){
     seriesFavoritas = JSON.parse(recuperoStorageSeries); 
   }
 
-  //capturo los datos 
+
   let linkFav = document.querySelector('.favoritosSeriesDetalle'); 
 
-  //si el id esta en el array de seriesFavoritas 
+  
   if(seriesFavoritas.includes(id)){
   linkFav.innerText= "Quitar de Favoritos"; 
   }
 
-  //cuando haga click
+
     linkFav.addEventListener('click', function(event){
     event.preventDefault();
 
-    //para quitar de seriesFavoritas 
+    
     if(seriesFavoritas.includes(id)){   
       let idASacarSeries= seriesFavoritas.indexOf(id);
       seriesFavoritas.splice(idASacarSeries,1);
       linkFav.innerText= "Agregar a Favoritos";
     }
     else {
-    //pushear el id al array
+
       seriesFavoritas.push(id);
       linkFav.innerText= "Quitar de Favoritos"; 
     }
     
-    //guardar el array al storage 
+    
     let seriesFavoritasString = JSON.stringify(seriesFavoritas)
     localStorage.setItem('seriesFavoritas', seriesFavoritasString);
     

@@ -35,38 +35,38 @@ fetch(url)
 //  agregar a peliculasFavoritas
     let peliculasFavoritas = [];
 
-  // actualizar el array por si hay datos en el storage
+  
   let recuperoStoragePelis = localStorage.getItem('peliculasFavoritas');
 
   if (recuperoStoragePelis != null){
     peliculasFavoritas = JSON.parse(recuperoStoragePelis); 
   }
 
-  //capturo los datos 
+  
   let linkFav = document.querySelector('.favoritosPelisDetalle'); 
 
-  //si el id esta en el array de peliculasFavoritas 
+  
   if(peliculasFavoritas.includes(id)){
   linkFav.innerText= "Quitar de Favoritos"; 
   }
     
-  //cuando haga click
+  
     linkFav.addEventListener('click', function(event){
     event.preventDefault();
 
-    //para quitar de peliculasFavoritas 
+
     if(peliculasFavoritas.includes(id)){
       let idASacarPeliculas= peliculasFavoritas.indexOf(id);
       peliculasFavoritas.splice(idASacarPeliculas,1);
       linkFav.innerText= "Agregar a Favoritos";
     }
     else {
-    //pushear el id al array
+ 
       peliculasFavoritas.push(id);
       linkFav.innerText= "Quitar de Favoritos"; 
     }
     
-    //guardar el array al storage 
+
     let peliculasFavoritasString = JSON.stringify(peliculasFavoritas);
     localStorage.setItem('peliculasFavoritas', peliculasFavoritasString);
     
