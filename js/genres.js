@@ -76,3 +76,23 @@ fetch(serie1)
 .catch(function(error) {
   console.log("Error: " + error);
 })
+
+
+let formulario = document.querySelector('form');
+let inputField = document.querySelector('#buscador');
+let message = document.querySelector('.message');
+console.log(formulario)
+
+formulario.addEventListener('submit', function(event){
+    event.preventDefault();
+    
+    if(inputField.value.length == 0 ){ 
+        
+        message.innerText = "Completar el campo"
+
+    } else if(inputField.value.length < 3){
+        message.innerText = "Poner 3 caracteres como minimo"
+    } else {
+        formulario.submit()
+    }
+})

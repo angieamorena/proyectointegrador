@@ -1,54 +1,41 @@
-//validar formulario//
-
 let formulario = document.querySelector('form');
-let inputField = document.querySelector('.buscar');
+let inputField = document.querySelector('#buscador');
 let message = document.querySelector('.message');
 console.log(formulario)
 
-formulario.addEventListener('submit', function(evento){
-    evento.preventDefault();
+formulario.addEventListener('submit', function(event){
+    event.preventDefault();
     
-    //Que el campo no esté vacío
-    if(inputField.value == ""){
-        //Mostrar un mensaje al usuario
-        message.innerText = "El campo es obligatorio"
-    //Chequear si puso más de 3 caracteres.    
+    if(inputField.value.length == 0 ){ 
+        
+        message.innerText = "Completar el campo"
+
     } else if(inputField.value.length < 3){
-        message.innerText = "Ingresar al menos 3 caracteres"
+        message.innerText = "Poner 3 caracteres como minimo"
     } else {
         formulario.submit()
     }
-
-})
-
-//Cuando el usuario ingrese al campo => limpiar el mensaje de error.
-inputField.addEventListener('focus', function(evento){
-  evento.preventDefault(); 
-  console.log(evento)
-    //Limpiar el mensaje de error
-    message.innerText = "";
-    //Limpie el valor que tenga el campo.
-    this.value = "";
 })
 
 
 
-let queryString = window.location.search; //agarro toda la url//
+
+let queryString = window.location.search; 
 
 let queryObject = new URLSearchParams (queryString); 
 console.log (queryObject);
-// en query object transformo la url entera para poder agarrar los datos requeridos (los que la persona busco)//
 
-let search = queryObject.get('buscar'); //agarraste la url y la separaste y podes ahora buscar puntualmente//
+
+let search = queryObject.get('buscar'); 
 console.log (search)
 
 let url = `https://api.themoviedb.org/3/search/multi?api_key=93e508f17b507f9418365fe0a4069252&language=en-US&query=${search}&page=1&include_adult=false` //destaca el resultado de la busquedA//
 
-let containerResults = document.querySelector ('.contenedorBusqueda'); //se captura el lugar donde se va meter la busqueda//
+let containerResults = document.querySelector ('.contenedorBusqueda'); 
 let searchTitle = document.querySelector ('.buscadorTitulo')
 
 
-  // Filtro: TODOS [Series, Peliculas y Actores]
+//Todas las opciones juntas//
       
   fetch (url)
   .then (datos=>datos.json() )
@@ -58,7 +45,7 @@ let searchTitle = document.querySelector ('.buscadorTitulo')
       let results = ''
   
       respuesta.results.forEach ((multi, index) => {
-        // Series //
+        
         if (multi.media_type == "tv"){
           results += 
           `<article>
@@ -70,7 +57,7 @@ let searchTitle = document.querySelector ('.buscadorTitulo')
          containerResults.innerHTML= results
         }
   
-        // Películas //
+        
         else if (multi.media_type == "movie"){
           results +=
           `<article>
@@ -82,7 +69,7 @@ let searchTitle = document.querySelector ('.buscadorTitulo')
               containerResults.innerHTML= results
             }
           
-          // Personas 
+          
           else if (multi.media_type == "person"){
               
               results += 
