@@ -34,6 +34,8 @@ for (let i = 0; i < favoritosSeries.length; i++) {
             console.log(error);
         })
 }
+
+
 let recuperoStoragePelis = localStorage.getItem('peliculasFavoritas');
 let favoritosPelis = JSON.parse(recuperoStoragePelis);
 let listaPeliculas = document.querySelector('.favoritePelis');
