@@ -15,15 +15,15 @@ fetch(url)
 .then(function(data) {
   console.log(data);
   let peliculasGenero= document.querySelector(".peliculasGenero")
-  let listageneros= ''
+  let listaGeneros= '';
   for(let i=0; i<data.results.length; i++ ){
-    listageneros += `<article> 
+    listaGeneros += `<article> 
     <p>${data.results[i].title} </p>
     <img src= "https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt= '' />
      <a href= "./detailsMovies.html?id=${data.results[i].id}"> Ver mas</a>
      </article>`;
   }
-  peliculasGenero.innerHTML= listageneros; 
+  peliculasGenero.innerHTML= listaGeneros; 
 })
 .catch(function(error) {
   console.log("Error: " + error);
@@ -70,6 +70,7 @@ fetch(URLparaElTitulo)
   console.log("Error: " + error);
 })
 
+//validando formularios 
 
 let formulario = document.querySelector('form');
 let inputField = document.querySelector('#buscador');
