@@ -25,7 +25,7 @@ for (let i = 0; i < favoritosSeries.length; i++) {
                 seriesFavoritas += `<article> 
                                     <p>Name:${data.name}</p>
                                     <img src="https://image.tmdb.org/t/p/w342${data.poster_path}" alt=''/>
-                                    <a href="./detailsMovies.html?id=${data.id}"> Ver mas</a>
+                                    <a href="./detailsSeries.html?id=${data.id}"> Ver mas</a>
                                    </article>`
             
             listaSeries.innerHTML += seriesFavoritas;
